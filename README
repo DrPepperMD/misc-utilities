@@ -1,0 +1,6 @@
+--------------------------------------------------------------------------------
+This is a collection of utilities that I use in my other projects this was part
+inspired by UNIX philosophy and the GNU Coreutils, this would contain stuff like
+headers that add yes or no prompts and what not; it will also be the new home
+for comprompt for more information on indivudual things go to /doc and a short
+guide should be there.
