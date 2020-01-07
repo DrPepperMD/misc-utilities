@@ -1,0 +1,59 @@
+--------------------------------------------------------------------------------
+Documentation for comprompt:
+
+Comprompt is a work in progress command prompt that is meant to be simple and
+easy enough for a 3 year old to understand, though still in development it is
+usable and when it is done there will be a modified version for Adven.
+
+How to use:
+
+comprompt consists of two files, comprompt.h and misc.h, comprompt contains the
+main input and output and a few inbuilt "demo commands" and misc.h contains
+some misc stuff the about function which shows the version number and my name
+and the help function which is still under development but will be completed
+soon enough.
+
+To mount it in your project you first need to create a infinite for loop and
+#include "misc.h" like this:
+
+#include "misc.h"
+
+int foohack()
+{
+  for(;;)
+    {
+    }
+}
+
+Then a if else statement.
+
+#include "misc.h"
+
+int foohack()
+{
+  for(;;)
+    {
+      if (exitprompt == false)
+        {
+	}
+      else
+        return 0;
+    }
+}
+
+And finally the one function we've all been waiting for! commandinput();
+
+int foohack()
+{
+  for(;;)
+    {
+      if (exitprompt == false)
+        {
+	  commandinput();
+	}
+      else
+        return 0;
+    }
+}
+
+I also reccomend adding a system("clear"); and an about(); to make it better.
