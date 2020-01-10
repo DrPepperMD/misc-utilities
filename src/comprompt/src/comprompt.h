@@ -4,6 +4,9 @@
 #include <stdbool.h>
 #include "misc.h"
 
+#ifndef COMRPOMPT_H
+#define COMPROMPT_H
+
 // Whats nessecariy(? I can't spell :P) to make a functional prompt that is
 // simple enough for a 3 year old
 
@@ -34,28 +37,35 @@ int cmpcommand(command)
     {
       system("ls ~/ -R");
     }
-  // this is just a personnal thing, it's to make life a bit easier
+  else if (strcmp(command, "show w") == 0)
+    {
+      printf("Please go to section 15 of https://gnu.org/licenses/gpl-3.0.html\n");
+    }
+  else if (strcmp(command, "show c") == 0)
+    {
+      printf("Please go to section 5 of https://gnu.org/licenses/gpl-3.0.html\n");
+    }
   else if (strcmp(command, "edit") == 0)
     {
       int editor;
       printf("What is your editor of choice?\navalible choices:\n");
       printf("Nano [1] (may not work correctly)\nGNU Emacs [2]\n");
       scanf("%d", &editor);
-      if (editor == 1)
+      switch(editor)
 	{
+	case 1:
 	  system("nano");
-	}
-      else if (editor == 2)
-	{
+	  break;
+	case 2:
 	  system("emacs");
+	  break;
+	default:
+	  printf("comprompt- \"%d\" is not a valid option...\n\a", editor);
 	}
-      else
-	printf("int not recognised...\n");
     }
-  else if (strcmp(command, "reset") == 0)
+  else if (strcmp(command, "clear") == 0)
     {
       system("clear");
-      about();
     }
   else if (strcmp(command, "about") == 0)
     {
@@ -78,3 +88,5 @@ int cmpcommand(command)
       return 0;
     }
 }
+
+#endif
