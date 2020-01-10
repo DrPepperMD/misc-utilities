@@ -29,9 +29,13 @@ int help()
      it will just be a bunch of printf's but if you find a better way of doing
      this just hit me up
   */
-  printf("\"foo\" to ls root\t\t\"bar\" to ls home\n");
-  printf("\"foobar\" to ls home directory recursivly\t\t\"about\" to show about screen\n");
-  printf("\"help\" to show help with comprompt\t\t\"exit\" to exit or you could use ^X^C\n");
+  printf("\nfoo, bar and foobar are all metasyntactical commands, they just ls.\n");
+  printf("show w and show c show info regarding the GNU GPL license.\n");
+  printf("edit brings up an interface to select an editor.\n");
+  printf("clear clears the screen.\n");
+  printf("about shows some misc info.\n");
+  printf("help shows help and that is how you got here.\n");
+  printf("and finally exit will exit the prompt or shell or whatever!\n\n");
   return 0;
 }
 
