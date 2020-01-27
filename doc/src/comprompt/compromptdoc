@@ -1,9 +1,10 @@
 --------------------------------------------------------------------------------
 Documentation for comprompt:
 
-Comprompt is a work in progress command prompt that is meant to be simple and
-easy enough for a 3 year old to understand, though still in development it is
-usable and when it is done there will be a modified version for Adven.
+Comprompt is a work in progress command prompt, it cannot handle command line
+argument parsing though but it is meant to be simple and easy enough for a 3
+year old to understand, though still in development it is usable and when it
+is done there will be a modified version for Adven.
 
 How to use:
 
