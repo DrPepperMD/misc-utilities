@@ -1,22 +1,27 @@
 #include <stdlib.h>
+#include <stdbool.h>
 
 #ifndef MAIN_H
 #define MAIN_H
 
+#define COM_AMOUNT 7
+
+bool exitprompt;
 char command[8];
 
 // this is used in a switch statement later
 int magicnum;
 
 // This would be stored in comlist.h for adven
-char comlist[6][10] =
+char comlist[COM_AMOUNT][10] =
   {
    "foo",
    "bar",
    "foobar",
    "corge",
    "xyzzy",
-   "help"
+   "help",
+   "exit"
   };
 
 int input(command)
@@ -28,7 +33,7 @@ int input(command)
 
 int compare(command)
 {
-  for (int loopmax = 0; loopmax < 6; loopmax++)
+  for (int loopmax = 0; loopmax < COM_AMOUNT; loopmax++)
     {
       if (strcmp(command, comlist[loopmax]) == 0)
 	{
@@ -41,7 +46,6 @@ int compare(command)
 
 int execute(magicnum)
 {
-  printf("You said ");
   switch(magicnum)
     {
     case 0:
@@ -60,7 +64,13 @@ int execute(magicnum)
       printf("xyzzy\n");
       break;
     case 5:
-      printf("help\n");
+      for (int helploop = 0; helploop < COM_AMOUNT; helploop++)
+	{
+	  printf("%s\n", comlist[helploop]);
+	}
+      break;
+    case 6:
+      exitprompt = true;
       break;
     default:
       printf("Uh oh\n");
